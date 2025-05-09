@@ -10,7 +10,7 @@ This repository implements a 2.5D Mask R-CNN model for detecting and classifying
 
 * **`data/raw/`**: Raw CT scan and label data.
 * **`data/sample of preprocessed data/`**: Preprocessed tensor data (.pt files).
-* * **`2.5D MaskRCNN with less visualization.ipynb`**: Main notebook with all code and experiments. 
+* **`2.5D MaskRCNN with less visualization.ipynb`**: Main notebook with all code and experiments. 
 * **`notebooks/2.5D MaskRCNN.ipynb`**: Same notebook but with 300 visualized slices. Takes a while to open since its a big file.
 * **`requirements.txt`**: List of Python dependencies.
 
