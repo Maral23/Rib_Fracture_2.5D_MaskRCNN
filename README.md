@@ -8,8 +8,7 @@ This repository implements a 2.5D Mask R-CNN model for detecting and classifying
 
 ## Project Structure
 
-* **`data/raw/`**: Raw CT scan and label data.
-* **`data/sample of preprocessed data/`**: Preprocessed tensor data (.pt files).
+* **`sample of preprocessed data/`**: Preprocessed tensor data (.pt files).
 * **`2.5D MaskRCNN with less visualization.ipynb`**: Main notebook with all code and experiments. 
 * **`notebooks/2.5D MaskRCNN.ipynb`**: Same notebook but with 300 visualized slices. Takes a while to open since its a big file.
 * **`requirements.txt`**: List of Python dependencies.
@@ -31,7 +30,7 @@ Google Drive integration is included for seamless dataset access when using Goog
 ---
 
 ## Preprocessing
-
+Original data can be found: https://ribfrac.grand-challenge.org
 CT volumes are first windowed using Hounsfield Unit (HU) windowing (`level=450`, `width=1300`) to enhance bone contrast. Intensities are then normalized to the \[0, 1] range.
 
 Fracture labels are remapped using `ribfrac-train-info-1.csv`. Each sample consists of three consecutive slices centered at the z-index, resized to 256×256 pixels. Tiny fracture masks (<5 pixels) are filtered out, and a dummy 8×8 bounding box is added when no fracture is present to stabilize training.
